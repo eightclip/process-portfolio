@@ -6,340 +6,423 @@
   <title>Process Portfolio | John Jenkins</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    :root {
+      --beige: #e5e1d8;
+      --cream: #ede9e0;
+      --bronze: #b06a2a;
+      --bronze-light: #c98942;
+      --dark: #2d2d2d;
+      --muted: #8a8478;
+      --card-bg: #fff;
+    }
+
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f5f5f0;
-      color: #1a1a1a;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--beige);
+      color: var(--dark);
       min-height: 100vh;
     }
 
-    /* Header */
-    .header {
-      padding: 60px 40px 40px;
+    /* Hero Header */
+    .hero {
       max-width: 1400px;
       margin: 0 auto;
+      padding: 60px 40px 50px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
     }
 
-    .header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      margin-bottom: 8px;
+    .hero-text { max-width: 700px; }
+
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--bronze);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--bronze);
+      margin-bottom: 24px;
     }
 
-    .header p {
-      font-size: 1.1rem;
-      color: #666;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: -0.02em;
+      color: var(--bronze);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
       font-weight: 300;
+      max-width: 520px;
     }
 
-    .header .controls {
-      margin-top: 20px;
+    .hero-portrait {
+      width: 280px;
+      opacity: 0.9;
+    }
+
+    .hero-portrait img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .controls {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px 30px;
       display: flex;
       gap: 12px;
       align-items: center;
     }
 
-    .header .controls button {
-      padding: 8px 16px;
-      border: 1px solid #ddd;
-      background: white;
-      border-radius: 8px;
+    .controls button {
+      padding: 8px 18px;
+      border: 1.5px solid var(--bronze);
+      background: transparent;
+      color: var(--bronze);
+      border-radius: 24px;
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       cursor: pointer;
       transition: all 0.2s;
     }
 
-    .header .controls button:hover {
-      border-color: #1a1a1a;
-      background: #1a1a1a;
-      color: white;
-    }
-
-    .header .controls button.active {
-      background: #1a1a1a;
-      color: white;
-      border-color: #1a1a1a;
+    .controls button:hover,
+    .controls button.active {
+      background: var(--bronze);
+      color: var(--cream);
     }
 
     .edit-indicator {
       display: none;
-      padding: 4px 12px;
-      background: #e8f5e9;
-      color: #2e7d32;
+      padding: 4px 14px;
+      background: rgba(176,106,42,0.12);
+      color: var(--bronze);
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 500;
+      letter-spacing: 0.03em;
     }
 
     .edit-indicator.visible { display: inline-block; }
 
-    /* Section titles */
-    .section-title {
+    /* Section dividers */
+    .section-header {
       max-width: 1400px;
-      margin: 40px auto 20px;
-      padding: 0 40px;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1a1a1a;
+      margin: 0 auto;
+      padding: 0 40px 20px;
     }
 
-    .section-subtitle {
-      max-width: 1400px;
-      margin: -10px auto 20px;
-      padding: 0 40px;
-      font-size: 0.9rem;
-      color: #999;
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--bronze);
+    }
+
+    .section-header .count {
+      font-size: 0.85rem;
+      color: var(--muted);
       font-weight: 300;
+      margin-top: 4px;
     }
 
-    /* Bento Grid */
+    /* Masonry Bento Grid */
     .bento-grid {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 40px 40px;
+      padding: 0 40px 60px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
     .bento-card {
-      background: white;
-      border-radius: 16px;
+      background: var(--card-bg);
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(45,45,45,0.06);
+      transition: all 0.35s ease;
       cursor: pointer;
       position: relative;
     }
 
     .bento-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(45,45,45,0.12);
     }
 
-    .bento-card.dragging {
-      opacity: 0.5;
-      transform: rotate(2deg);
+    /* Featured = span 2 cols */
+    .bento-card.featured {
+      grid-column: span 2;
     }
 
     .bento-card .drag-handle {
       display: none;
       position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 28px;
-      height: 28px;
-      background: rgba(255,255,255,0.95);
+      top: 10px;
+      right: 10px;
+      width: 26px;
+      height: 26px;
+      background: rgba(255,255,255,0.92);
       border-radius: 6px;
       cursor: grab;
       z-index: 10;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
     }
 
     .bento-card .drag-handle svg {
-      width: 14px;
-      height: 14px;
-      fill: #666;
+      width: 12px;
+      height: 12px;
+      fill: var(--muted);
     }
 
-    .edit-mode .bento-card .drag-handle {
-      display: flex;
-    }
-
-    .edit-mode .bento-card {
-      cursor: grab;
-    }
-
+    .edit-mode .bento-card .drag-handle { display: flex; }
+    .edit-mode .bento-card { cursor: grab; }
     .edit-mode .bento-card:hover {
       transform: none;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
-      outline: 2px dashed #ccc;
+      box-shadow: 0 2px 8px rgba(45,45,45,0.06);
+      outline: 2px dashed var(--bronze-light);
     }
+
+    .bento-card.dragging { opacity: 0.4; transform: rotate(1deg); }
 
     .bento-card .screenshot {
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: cover;
       display: block;
-      background: #f0f0f0;
+      background: var(--cream);
+    }
+
+    .bento-card.featured .screenshot {
+      aspect-ratio: 16 / 9;
     }
 
     .bento-card .card-info {
-      padding: 16px 20px;
+      padding: 14px 18px 16px;
     }
 
     .bento-card .card-info h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 4px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 3px;
+    }
+
+    .bento-card.featured .card-info h3 {
+      font-size: 1.25rem;
     }
 
     .bento-card .card-info .domain-url {
-      font-size: 0.8rem;
-      color: #999;
+      font-size: 0.75rem;
+      color: var(--muted);
       font-weight: 400;
     }
 
-    /* Coming Soon Section */
+    .bento-card .card-info .aliases {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .bento-card .card-info .alias-tag {
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      background: var(--cream);
+      color: var(--muted);
+      border-radius: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Coming Soon */
     .coming-soon-grid {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 40px 80px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 10px;
     }
 
     .coming-soon-card {
-      background: white;
-      border-radius: 12px;
-      padding: 16px 20px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      border: 1px solid #eee;
+      background: var(--cream);
+      border-radius: 10px;
+      padding: 14px 16px;
       position: relative;
+      border: 1px solid rgba(176,106,42,0.08);
     }
 
     .coming-soon-card h4 {
+      font-family: 'Playfair Display', serif;
       font-size: 0.85rem;
-      font-weight: 500;
+      font-weight: 400;
       margin-bottom: 2px;
+      color: var(--dark);
     }
 
     .coming-soon-card .domain-url {
-      font-size: 0.75rem;
-      color: #bbb;
+      font-size: 0.7rem;
+      color: var(--muted);
     }
 
     .coming-soon-card .badge {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      font-size: 0.65rem;
-      padding: 2px 8px;
-      border-radius: 10px;
+      top: 10px;
+      right: 10px;
+      font-size: 0.6rem;
+      padding: 2px 7px;
+      border-radius: 8px;
       font-weight: 500;
+      letter-spacing: 0.03em;
     }
 
-    .badge.redirect {
-      background: #fff3e0;
-      color: #e65100;
-    }
-
-    .badge.parked {
-      background: #f3e5f5;
-      color: #7b1fa2;
-    }
-
-    .badge.error {
-      background: #fce4ec;
-      color: #c62828;
-    }
+    .badge.redirect { background: #f5ebe0; color: var(--bronze); }
+    .badge.parked { background: #ede9e0; color: #999; }
+    .badge.error { background: #f5ebe0; color: #b08968; }
 
     /* Footer */
     .footer {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 20px 40px 40px;
+      padding: 30px 40px 50px;
       text-align: center;
-      font-size: 0.8rem;
-      color: #bbb;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(176,106,42,0.12);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .header { padding: 40px 20px 24px; }
-      .header h1 { font-size: 2rem; }
-      .bento-grid { padding: 0 20px 40px; gap: 16px; grid-template-columns: 1fr; }
-      .coming-soon-grid { padding: 0 20px 60px; grid-template-columns: repeat(2, 1fr); }
-      .section-title, .section-subtitle { padding: 0 20px; }
-    }
+    .footer span { color: var(--bronze); }
 
-    /* Placeholder for no-screenshot */
-    .placeholder-img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: #ccc;
-    }
-
-    /* Toast notification */
+    /* Toast */
     .toast {
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #1a1a1a;
-      color: white;
+      background: var(--dark);
+      color: var(--cream);
       padding: 12px 20px;
       border-radius: 10px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       opacity: 0;
       transform: translateY(10px);
       transition: all 0.3s;
       z-index: 1000;
     }
 
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .bento-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 30px;
+        text-align: center;
+      }
+      .hero-text { max-width: 100%; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { max-width: 100%; }
+      .hero-portrait { width: 180px; margin: 0 auto; }
+      .logo-mark { margin: 0 auto 20px; }
+      .controls { padding: 0 20px 20px; justify-content: center; }
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px 40px;
+        gap: 12px;
+      }
+      .bento-card.featured { grid-column: span 2; }
+      .section-header { padding: 0 20px 16px; }
+      .coming-soon-grid { padding: 0 20px 60px; grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .bento-grid { grid-template-columns: 1fr; }
+      .bento-card.featured { grid-column: span 1; }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Process Portfolio</h1>
-    <p>A collection of projects, brands, and experiments by John Jenkins</p>
-    <div class="controls">
-      <button id="editToggle" onclick="toggleEditMode()">Reorder</button>
-      <button id="resetOrder" onclick="resetOrder()" style="display:none">Reset Order</button>
-      <span id="editIndicator" class="edit-indicator">Drag to reorder</span>
+  <div class="hero">
+    <div class="hero-text">
+      <div class="logo-mark">Pp</div>
+      <h1>The Process Portfolio</h1>
+      <p>An eclectic collection of innovative companies created by John Jenkins and owned by the What We Do Collective. Coffee shops, restaurants, media companies, games, and other direct-to-consumer properties.</p>
+    </div>
+    <div class="hero-portrait">
+      <img src="assets/portrait.png" alt="John Jenkins" loading="lazy">
     </div>
   </div>
 
-  <h2 class="section-title">Live Projects</h2>
-  <p class="section-subtitle" id="liveCount"></p>
+  <div class="controls">
+    <button id="editToggle" onclick="toggleEditMode()">Reorder</button>
+    <button id="resetOrder" onclick="resetOrder()" style="display:none">Reset</button>
+    <span id="editIndicator" class="edit-indicator">Drag to reorder</span>
+  </div>
+
+  <div class="section-header">
+    <h2>Properties</h2>
+    <div class="count" id="liveCount"></div>
+  </div>
   <div class="bento-grid" id="liveGrid"></div>
 
-  <h2 class="section-title">Coming Soon</h2>
-  <p class="section-subtitle" id="comingSoonCount"></p>
+  <div class="section-header">
+    <h2>Coming Soon</h2>
+    <div class="count" id="comingSoonCount"></div>
+  </div>
   <div class="coming-soon-grid" id="comingSoonGrid"></div>
 
   <div class="footer">
-    &copy; 2026 John Jenkins &middot; Process Portfolio
+    &copy; 2026 <span>Process Portfolio</span> &middot; John Jenkins &middot; What We Do Collective
   </div>
 
   <div class="toast" id="toast"></div>
 
   <script>
-    // Drag handle SVG
     const DRAG_ICON = `<svg viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg>`;
 
     let editMode = false;
     let sortable = null;
 
-    // Load scan results
     async function loadData() {
       try {
         const res = await fetch('scan-results.json');
         const data = await res.json();
         renderGrid(data);
       } catch (e) {
-        // Fallback: show placeholder with domain names
-        console.log('No scan results yet. Run capture-screenshots.js first.');
-        document.getElementById('liveGrid').innerHTML = '<p style="padding: 20px; color: #999;">Run the screenshot capture script first, then refresh.</p>';
+        document.getElementById('liveGrid').innerHTML = '<p style="padding:20px;color:var(--muted);">Loading...</p>';
       }
     }
 
@@ -347,7 +430,6 @@
       const liveGrid = document.getElementById('liveGrid');
       const comingSoonGrid = document.getElementById('comingSoonGrid');
 
-      // Check for saved order in localStorage
       const savedOrder = JSON.parse(localStorage.getItem('pp-live-order') || 'null');
       let liveItems = data.live;
 
@@ -361,25 +443,32 @@
         });
       }
 
-      document.getElementById('liveCount').textContent = `${liveItems.length} active projects`;
+      document.getElementById('liveCount').textContent = `${liveItems.length} active properties`;
       document.getElementById('comingSoonCount').textContent = `${data.comingSoon.length} domains in the works`;
 
-      // Render live cards
-      liveGrid.innerHTML = liveItems.map(item => `
-        <div class="bento-card" data-domain="${item.domain}" onclick="if(!editMode) window.open('https://${item.domain}', '_blank')">
-          <div class="drag-handle">${DRAG_ICON}</div>
-          ${item.screenshotFile
-            ? `<img class="screenshot" src="${item.screenshotFile}" alt="${item.name}" loading="lazy">`
-            : `<div class="placeholder-img">?</div>`
-          }
-          <div class="card-info">
-            <h3>${item.name}</h3>
-            <span class="domain-url">${item.domain}</span>
-          </div>
-        </div>
-      `).join('');
+      liveGrid.innerHTML = liveItems.map(item => {
+        const isFeatured = item.featured ? ' featured' : '';
+        const aliases = item.aliases || [];
+        const aliasHTML = aliases.length > 0
+          ? `<div class="aliases">${aliases.map(a => `<span class="alias-tag">${a}</span>`).join('')}</div>`
+          : '';
 
-      // Render coming soon
+        return `
+          <div class="bento-card${isFeatured}" data-domain="${item.domain}" onclick="if(!editMode) window.open('https://${item.domain}', '_blank')">
+            <div class="drag-handle">${DRAG_ICON}</div>
+            ${item.screenshotFile
+              ? `<img class="screenshot" src="${item.screenshotFile}" alt="${item.name}" loading="lazy">`
+              : `<div class="screenshot" style="display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1.5rem;">?</div>`
+            }
+            <div class="card-info">
+              <h3>${item.name}</h3>
+              <span class="domain-url">${item.domain}</span>
+              ${aliasHTML}
+            </div>
+          </div>
+        `;
+      }).join('');
+
       comingSoonGrid.innerHTML = data.comingSoon.map(item => {
         let badgeClass = item.status === 'redirect' ? 'redirect' : item.status === 'parked' ? 'parked' : 'error';
         let badgeText = item.status === 'redirect' ? 'Redirect' : item.status === 'parked' ? 'Parked' : 'Offline';
@@ -416,10 +505,7 @@
       document.getElementById('editToggle').textContent = editMode ? 'Done' : 'Reorder';
       document.getElementById('editIndicator').classList.toggle('visible', editMode);
       document.getElementById('resetOrder').style.display = editMode ? 'inline-block' : 'none';
-
-      if (sortable) {
-        sortable.option('disabled', !editMode);
-      }
+      if (sortable) sortable.option('disabled', !editMode);
     }
 
     function saveOrder() {
@@ -440,7 +526,6 @@
       setTimeout(() => toast.classList.remove('show'), 2000);
     }
 
-    // Init
     loadData();
   </script>
 </body>
