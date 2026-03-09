@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process Portfolio | John Jenkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f5f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      padding: 60px 40px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      color: #666;
+      font-weight: 300;
+    }
+
+    .header .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .header .controls button {
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .header .controls button:hover {
+      border-color: #1a1a1a;
+      background: #1a1a1a;
+      color: white;
+    }
+
+    .header .controls button.active {
+      background: #1a1a1a;
+      color: white;
+      border-color: #1a1a1a;
+    }
+
+    .edit-indicator {
+      display: none;
+      padding: 4px 12px;
+      background: #e8f5e9;
+      color: #2e7d32;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .edit-indicator.visible { display: inline-block; }
+
+    /* Section titles */
+    .section-title {
+      max-width: 1400px;
+      margin: 40px auto 20px;
+      padding: 0 40px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .section-subtitle {
+      max-width: 1400px;
+      margin: -10px auto 20px;
+      padding: 0 40px;
+      font-size: 0.9rem;
+      color: #999;
+      font-weight: 300;
+    }
+
+    /* Bento Grid */
+    .bento-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .bento-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .bento-card.dragging {
+      opacity: 0.5;
+      transform: rotate(2deg);
+    }
+
+    .bento-card .drag-handle {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 6px;
+      cursor: grab;
+      z-index: 10;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+
+    .bento-card .drag-handle svg {
+      width: 14px;
+      height: 14px;
+      fill: #666;
+    }
+
+    .edit-mode .bento-card .drag-handle {
+      display: flex;
+    }
+
+    .edit-mode .bento-card {
+      cursor: grab;
+    }
+
+    .edit-mode .bento-card:hover {
+      transform: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+      outline: 2px dashed #ccc;
+    }
+
+    .bento-card .screenshot {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+      background: #f0f0f0;
+    }
+
+    .bento-card .card-info {
+      padding: 16px 20px;
+    }
+
+    .bento-card .card-info h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .bento-card .card-info .domain-url {
+      font-size: 0.8rem;
+      color: #999;
+      font-weight: 400;
+    }
+
+    /* Coming Soon Section */
+    .coming-soon-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .coming-soon-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid #eee;
+      position: relative;
+    }
+
+    .coming-soon-card h4 {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .coming-soon-card .domain-url {
+      font-size: 0.75rem;
+      color: #bbb;
+    }
+
+    .coming-soon-card .badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    .badge.redirect {
+      background: #fff3e0;
+      color: #e65100;
+    }
+
+    .badge.parked {
+      background: #f3e5f5;
+      color: #7b1fa2;
+    }
+
+    .badge.error {
+      background: #fce4ec;
+      color: #c62828;
+    }
+
+    /* Footer */
+    .footer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px 40px 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #bbb;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header { padding: 40px 20px 24px; }
+      .header h1 { font-size: 2rem; }
+      .bento-grid { padding: 0 20px 40px; gap: 16px; grid-template-columns: 1fr; }
+      .coming-soon-grid { padding: 0 20px 60px; grid-template-columns: repeat(2, 1fr); }
+      .section-title, .section-subtitle { padding: 0 20px; }
+    }
+
+    /* Placeholder for no-screenshot */
+    .placeholder-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #ccc;
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1a1a1a;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Process Portfolio</h1>
+    <p>A collection of projects, brands, and experiments by John Jenkins</p>
+    <div class="controls">
+      <button id="editToggle" onclick="toggleEditMode()">Reorder</button>
+      <button id="resetOrder" onclick="resetOrder()" style="display:none">Reset Order</button>
+      <span id="editIndicator" class="edit-indicator">Drag to reorder</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">Live Projects</h2>
+  <p class="section-subtitle" id="liveCount"></p>
+  <div class="bento-grid" id="liveGrid"></div>
+
+  <h2 class="section-title">Coming Soon</h2>
+  <p class="section-subtitle" id="comingSoonCount"></p>
+  <div class="coming-soon-grid" id="comingSoonGrid"></div>
+
+  <div class="footer">
+    &copy; 2026 John Jenkins &middot; Process Portfolio
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // Drag handle SVG
+    const DRAG_ICON = `<svg viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.5"/><circle cx="15" cy="6" r="1.5"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="18" r="1.5"/><circle cx="15" cy="18" r="1.5"/></svg>`;
+
+    let editMode = false;
+    let sortable = null;
+
+    // Load scan results
+    async function loadData() {
+      try {
+        const res = await fetch('scan-results.json');
+        const data = await res.json();
+        renderGrid(data);
+      } catch (e) {
+        // Fallback: show placeholder with domain names
+        console.log('No scan results yet. Run capture-screenshots.js first.');
+        document.getElementById('liveGrid').innerHTML = '<p style="padding: 20px; color: #999;">Run the screenshot capture script first, then refresh.</p>';
+      }
+    }
+
+    function renderGrid(data) {
+      const liveGrid = document.getElementById('liveGrid');
+      const comingSoonGrid = document.getElementById('comingSoonGrid');
+
+      // Check for saved order in localStorage
+      const savedOrder = JSON.parse(localStorage.getItem('pp-live-order') || 'null');
+      let liveItems = data.live;
+
+      if (savedOrder) {
+        const orderMap = {};
+        savedOrder.forEach((domain, i) => orderMap[domain] = i);
+        liveItems = [...liveItems].sort((a, b) => {
+          const ai = orderMap[a.domain] ?? 999;
+          const bi = orderMap[b.domain] ?? 999;
+          return ai - bi;
+        });
+      }
+
+      document.getElementById('liveCount').textContent = `${liveItems.length} active projects`;
+      document.getElementById('comingSoonCount').textContent = `${data.comingSoon.length} domains in the works`;
+
+      // Render live cards
+      liveGrid.innerHTML = liveItems.map(item => `
+        <div class="bento-card" data-domain="${item.domain}" onclick="if(!editMode) window.open('https://${item.domain}', '_blank')">
+          <div class="drag-handle">${DRAG_ICON}</div>
+          ${item.screenshotFile
+            ? `<img class="screenshot" src="${item.screenshotFile}" alt="${item.name}" loading="lazy">`
+            : `<div class="placeholder-img">?</div>`
+          }
+          <div class="card-info">
+            <h3>${item.name}</h3>
+            <span class="domain-url">${item.domain}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // Render coming soon
+      comingSoonGrid.innerHTML = data.comingSoon.map(item => {
+        let badgeClass = item.status === 'redirect' ? 'redirect' : item.status === 'parked' ? 'parked' : 'error';
+        let badgeText = item.status === 'redirect' ? 'Redirect' : item.status === 'parked' ? 'Parked' : 'Offline';
+        return `
+          <div class="coming-soon-card">
+            <h4>${item.name}</h4>
+            <span class="domain-url">${item.domain}</span>
+            <span class="badge ${badgeClass}">${badgeText}</span>
+          </div>
+        `;
+      }).join('');
+
+      initSortable();
+    }
+
+    function initSortable() {
+      const grid = document.getElementById('liveGrid');
+      sortable = new Sortable(grid, {
+        animation: 200,
+        handle: '.drag-handle',
+        ghostClass: 'dragging',
+        disabled: true,
+        onEnd: function() {
+          saveOrder();
+          showToast('Order saved');
+        }
+      });
+    }
+
+    function toggleEditMode() {
+      editMode = !editMode;
+      document.body.classList.toggle('edit-mode', editMode);
+      document.getElementById('editToggle').classList.toggle('active', editMode);
+      document.getElementById('editToggle').textContent = editMode ? 'Done' : 'Reorder';
+      document.getElementById('editIndicator').classList.toggle('visible', editMode);
+      document.getElementById('resetOrder').style.display = editMode ? 'inline-block' : 'none';
+
+      if (sortable) {
+        sortable.option('disabled', !editMode);
+      }
+    }
+
+    function saveOrder() {
+      const cards = document.querySelectorAll('#liveGrid .bento-card');
+      const order = Array.from(cards).map(c => c.dataset.domain);
+      localStorage.setItem('pp-live-order', JSON.stringify(order));
+    }
+
+    function resetOrder() {
+      localStorage.removeItem('pp-live-order');
+      location.reload();
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    // Init
+    loadData();
+  </script>
+</body>
+</html>

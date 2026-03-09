@@ -1,0 +1,651 @@
+{
+  "live": [
+    {
+      "domain": "beeper.club",
+      "name": "Beeper Club",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://beeper.club/",
+      "screenshotFile": "screenshots/beeper_club.jpg",
+      "error": null,
+      "title": "BEEPER.CLUB \u2014 Page Your People"
+    },
+    {
+      "domain": "beeperapp.net",
+      "name": "Beeper App",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://beeperapp.net/",
+      "screenshotFile": "screenshots/beeperapp_net.jpg",
+      "error": null,
+      "title": "BEEPER.CLUB \u2014 Page Your People"
+    },
+    {
+      "domain": "cacultureclub.com",
+      "name": "CA Culture Club",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://cacultureclub.com/",
+      "screenshotFile": "screenshots/cacultureclub_com.jpg",
+      "error": null,
+      "title": "CA Culture Club"
+    },
+    {
+      "domain": "cafesomeday.com",
+      "name": "Caf\u00e9 Someday",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://cafesomeday.com/",
+      "screenshotFile": "screenshots/cafesomeday_com.jpg",
+      "error": null,
+      "title": "Caf\u00e9 Someday"
+    },
+    {
+      "domain": "catchingzs.com",
+      "name": "Catching Z's",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.catchingzs.com/",
+      "screenshotFile": "screenshots/catchingzs_com.jpg",
+      "error": null,
+      "title": "Catching Z's"
+    },
+    {
+      "domain": "gate14.net",
+      "name": "Gate 14 Fitness",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.gate14.net/",
+      "screenshotFile": "screenshots/gate14_net.jpg",
+      "error": null,
+      "title": "Gate 14 Fitness | Strength. Conditioning. Culture. Community. Join the Movement Today!"
+    },
+    {
+      "domain": "getpitteddeli.com",
+      "name": "Pitted Delicatessen",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://getpitteddeli.com/",
+      "screenshotFile": "screenshots/getpitteddeli_com.jpg",
+      "error": null,
+      "title": "Pitted Delicatessen"
+    },
+    {
+      "domain": "jenkinsfamilystories.com",
+      "name": "Jenkins Family Stories",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://jenkinsfamilystories.com/#browse",
+      "screenshotFile": "screenshots/jenkinsfamilystories_com.jpg",
+      "error": null,
+      "title": "Jenkins Family Stories"
+    },
+    {
+      "domain": "johneightclip.com",
+      "name": "John Eightclip",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/johneightclip_com.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins"
+    },
+    {
+      "domain": "johnmjenkins.com",
+      "name": "John M. Jenkins",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/johnmjenkins_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins"
+    },
+    {
+      "domain": "nailedit.studio",
+      "name": "Nailed It Studio",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://nailedit.studio/",
+      "screenshotFile": "screenshots/nailedit_studio.jpg",
+      "error": null,
+      "title": "Nail Edit // Nailed It."
+    },
+    {
+      "domain": "nofillercoffee.com",
+      "name": "No Filler Coffee",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://nofillercoffee.com/",
+      "screenshotFile": "screenshots/nofillercoffee_com.jpg",
+      "error": null,
+      "title": "No Filler Coffee"
+    },
+    {
+      "domain": "pippypopspizza.com",
+      "name": "Pippy Pop's Pizza",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://pippypopspizza.com/",
+      "screenshotFile": "screenshots/pippypopspizza_com.jpg",
+      "error": null,
+      "title": "Pippy Pops Pizza"
+    },
+    {
+      "domain": "processportfolio.com",
+      "name": "Process Portfolio",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://processportfolio.com/",
+      "screenshotFile": "screenshots/processportfolio_com.jpg",
+      "error": null,
+      "title": "Brand Designer Portfolio Website in Beige Black Bronze Warm Classic Style"
+    },
+    {
+      "domain": "raw-rec.com",
+      "name": "RAW Records",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://raw-rec.com/",
+      "screenshotFile": "screenshots/raw-rec_com.jpg",
+      "error": null,
+      "title": "RAW Records"
+    },
+    {
+      "domain": "reassemblingmarion.com",
+      "name": "Reassembling Marion",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://reassemblingmarion.com/login",
+      "screenshotFile": "screenshots/reassemblingmarion_com.jpg",
+      "error": null,
+      "title": "Reassembling Marion"
+    },
+    {
+      "domain": "theoverhill.com",
+      "name": "The Overhill",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://theoverhill.com/",
+      "screenshotFile": "screenshots/theoverhill_com.jpg",
+      "error": null,
+      "title": "THE OVERHILL"
+    },
+    {
+      "domain": "thisisprocess.net",
+      "name": "Process",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://thisisprocess.net/",
+      "screenshotFile": "screenshots/thisisprocess_net.jpg",
+      "error": null,
+      "title": "Process"
+    },
+    {
+      "domain": "whatwedocollective.com",
+      "name": "What We Do Collective",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.whatwedocollective.com/",
+      "screenshotFile": "screenshots/whatwedocollective_com.jpg",
+      "error": null,
+      "title": "What-Creative"
+    },
+    {
+      "domain": "puddin.xyz",
+      "name": "Puddin' Snacks",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.puddin.xyz/",
+      "screenshotFile": "screenshots/puddin_xyz.jpg",
+      "error": null,
+      "title": "Puddin' Snacks"
+    },
+    {
+      "domain": "wolfpotato.com",
+      "name": "Wolf & Potato",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://www.wolfpotato.com/",
+      "screenshotFile": "screenshots/wolfpotato_com.jpg",
+      "error": null,
+      "title": "Wolf & Potato"
+    },
+    {
+      "domain": "mynameisgaelyn.com",
+      "name": "My Name is Gaelyn",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://mynameisgaelyn.com/",
+      "screenshotFile": "screenshots/mynameisgaelyn_com.jpg",
+      "error": null,
+      "title": "My Name is Gaelyn"
+    },
+    {
+      "domain": "stblr.xyz",
+      "name": "STBLR",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://stblr.xyz/",
+      "screenshotFile": "screenshots/stblr_xyz.jpg",
+      "error": null,
+      "title": "Stablecoin Economy Games \u2014 Powered by Eco"
+    },
+    {
+      "domain": "jenkinsstark.com",
+      "name": "Jenkins-Stark Albums",
+      "knownForward": null,
+      "status": "live",
+      "finalUrl": "https://jenkinsstark.com/login",
+      "screenshotFile": "screenshots/jenkinsstark_com.jpg",
+      "error": null,
+      "title": "Jenkins-Stark Family Albums"
+    }
+  ],
+  "comingSoon": [
+    {
+      "domain": "afoolsworld.com",
+      "name": "A Fool's World",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://afoolsworld.com/",
+      "screenshotFile": "screenshots/afoolsworld_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "bestcontentcreativeever.com",
+      "name": "Best Content Creative Ever",
+      "knownForward": "johnmjenkins.com",
+      "status": "redirect",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/bestcontentcreativeever_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins",
+      "redirectTo": "johnmjenkins.com"
+    },
+    {
+      "domain": "bestcreativeever.com",
+      "name": "Best Creative Ever",
+      "knownForward": "johnmjenkins.com",
+      "status": "redirect",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/bestcreativeever_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins",
+      "redirectTo": "johnmjenkins.com"
+    },
+    {
+      "domain": "brothersjenkins.com",
+      "name": "Brothers Jenkins",
+      "knownForward": "johneightclip.com/party",
+      "status": "parked",
+      "finalUrl": "https://brothersjenkins.com/",
+      "screenshotFile": "screenshots/brothersjenkins_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "caculture.club",
+      "name": "CA Culture",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://caculture.club",
+      "title": null
+    },
+    {
+      "domain": "checkthepool.com",
+      "name": "Check The Pool",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://checkthepool.com/",
+      "screenshotFile": "screenshots/checkthepool_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "eightclip.com",
+      "name": "Eightclip",
+      "knownForward": "johneightclip.com",
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/eightclip_com.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "generationlegacyfilm.com",
+      "name": "Generation Legacy Film",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://generationlegacyfilm.com/",
+      "screenshotFile": "screenshots/generationlegacyfilm_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "ibuildweb3brands.com",
+      "name": "I Build Web3 Brands",
+      "knownForward": "johnmjenkins.com",
+      "status": "redirect",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/ibuildweb3brands_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins",
+      "redirectTo": "johnmjenkins.com"
+    },
+    {
+      "domain": "johnjenkins.xyz",
+      "name": "John Jenkins XYZ",
+      "knownForward": "johneightclip.com",
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/johnjenkins_xyz.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "johnmjenkins.art",
+      "name": "John M Jenkins Art",
+      "knownForward": "johneightclip.com",
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/johnmjenkins_art.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "mycornerview.com",
+      "name": "My Corner View",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://mycornerview.com",
+      "title": null
+    },
+    {
+      "domain": "onthe.in",
+      "name": "On The In",
+      "knownForward": "johneightclip.com/ontheinside",
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/ontheinside",
+      "screenshotFile": "screenshots/onthe_in.jpg",
+      "error": null,
+      "title": "On The Inside \u2014 John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "oonfoods.com",
+      "name": "OON Foods",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://oonfoods.com/",
+      "screenshotFile": "screenshots/oonfoods_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "oonight.com",
+      "name": "OONight",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://oonight.com/",
+      "screenshotFile": "screenshots/oonight_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "peertopocket.com",
+      "name": "Peer To Pocket",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://peertopocket.com",
+      "title": null
+    },
+    {
+      "domain": "processonesheet.com",
+      "name": "Process One Sheet",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://processonesheet.com",
+      "title": null
+    },
+    {
+      "domain": "stabledogs.com",
+      "name": "Stable Dogs",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://stabledogs.com/",
+      "screenshotFile": "screenshots/stabledogs_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "stableritos.com",
+      "name": "Stableritos",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://stableritos.com/",
+      "screenshotFile": "screenshots/stableritos_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "swftcash.com",
+      "name": "SWFT Cash",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://swftcash.com",
+      "title": null
+    },
+    {
+      "domain": "swftsend.com",
+      "name": "SWFT Send",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://swftsend.com",
+      "title": null
+    },
+    {
+      "domain": "theanchored.com",
+      "name": "The Anchored",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://theanchored.com",
+      "title": null
+    },
+    {
+      "domain": "thebestbrandbuilder.com",
+      "name": "Best Brand Builder",
+      "knownForward": "johnmjenkins.com",
+      "status": "redirect",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/thebestbrandbuilder_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins",
+      "redirectTo": "johnmjenkins.com"
+    },
+    {
+      "domain": "thebestbranddirector.com",
+      "name": "Best Brand Director",
+      "knownForward": "johnmjenkins.com",
+      "status": "redirect",
+      "finalUrl": "https://johnmjenkins.com/",
+      "screenshotFile": "screenshots/thebestbranddirector_com.jpg",
+      "error": null,
+      "title": "John M. Jenkins",
+      "redirectTo": "johnmjenkins.com"
+    },
+    {
+      "domain": "thebestcreativeever.com",
+      "name": "Best Creative Ever",
+      "knownForward": null,
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/thebestcreativeever_com.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "thisisfuckinghenry.com",
+      "name": "This Is Henry",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://thisisfuckinghenry.com",
+      "title": null
+    },
+    {
+      "domain": "thisisjohnjenkins.com",
+      "name": "This Is John Jenkins",
+      "knownForward": "johneightclip.com",
+      "status": "redirect",
+      "finalUrl": "https://www.johneightclip.com/",
+      "screenshotFile": "screenshots/thisisjohnjenkins_com.jpg",
+      "error": null,
+      "title": "John \"eightclip\" Jenkins",
+      "redirectTo": "johneightclip.com"
+    },
+    {
+      "domain": "thisisprocess.art",
+      "name": "This Is Process Art",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://thisisprocess.art",
+      "title": null
+    },
+    {
+      "domain": "venicecarnivore.com",
+      "name": "Venice Carnivore",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://venicecarnivore.com/",
+      "screenshotFile": "screenshots/venicecarnivore_com.jpg",
+      "error": null,
+      "title": "Coming Soon"
+    },
+    {
+      "domain": "what-creative.com",
+      "name": "What Creative",
+      "knownForward": null,
+      "status": "redirect",
+      "finalUrl": "https://www.whatwedocollective.com/",
+      "screenshotFile": "screenshots/what-creative_com.jpg",
+      "error": null,
+      "title": "What-Creative",
+      "redirectTo": "whatwedocollective.com"
+    },
+    {
+      "domain": "wwdcollective.com",
+      "name": "WWD Collective",
+      "knownForward": null,
+      "status": "redirect",
+      "finalUrl": "https://www.whatwedocollective.com/",
+      "screenshotFile": "screenshots/wwdcollective_com.jpg",
+      "error": null,
+      "title": "What-Creative",
+      "redirectTo": "whatwedocollective.com"
+    },
+    {
+      "domain": "tryagain.fyi",
+      "name": "Try Again",
+      "knownForward": null,
+      "status": "parked",
+      "finalUrl": "https://tryagain.fyi/",
+      "screenshotFile": "screenshots/tryagain_fyi.jpg",
+      "error": null,
+      "title": "porkbun.com | parked domain"
+    },
+    {
+      "domain": "simplystable.xyz",
+      "name": "Simply Stable",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://simplystable.xyz",
+      "title": null
+    },
+    {
+      "domain": "puddinout.com",
+      "name": "Puddin Out",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://puddinout.com",
+      "title": null
+    },
+    {
+      "domain": "eobooks.xyz",
+      "name": "EO Books",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": "https://eobooks.xyz/",
+      "screenshotFile": "screenshots/eobooks_xyz.jpg",
+      "error": null,
+      "title": "eobooks.xyz | 525: SSL handshake failed"
+    },
+    {
+      "domain": "johnjenkins.studio",
+      "name": "John Jenkins Studio",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://johnjenkins.studio",
+      "title": null
+    },
+    {
+      "domain": "puddinprotein.com",
+      "name": "Puddin Protein",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://puddinprotein.com",
+      "title": null
+    },
+    {
+      "domain": "robitaillesquarters.com",
+      "name": "Robitaille's Quarters",
+      "knownForward": null,
+      "status": "redirect",
+      "finalUrl": "https://robitaillesquarters-com.l.ink/",
+      "screenshotFile": "screenshots/robitaillesquarters_com.jpg",
+      "error": null,
+      "title": "A Brand New Domain!",
+      "redirectTo": "robitaillesquarters-com.l.ink"
+    },
+    {
+      "domain": "johnandgaelyn.com",
+      "name": "John & Gaelyn",
+      "knownForward": null,
+      "status": "error",
+      "finalUrl": null,
+      "screenshotFile": null,
+      "error": "net::ERR_NAME_NOT_RESOLVED at https://johnandgaelyn.com",
+      "title": null
+    }
+  ],
+  "scanDate": "2026-03-09T04:18:43.340Z"
+}
