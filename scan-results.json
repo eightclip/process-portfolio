@@ -239,6 +239,78 @@
       "screenshotFile": "screenshots/jenkinsstark_com.jpg",
       "error": null,
       "title": "Jenkins-Stark Family Albums"
+    },
+    {
+      "domain": "games.gate14.net",
+      "name": "Gate 14 Games",
+      "status": "live",
+      "finalUrl": "https://games.gate14.net/",
+      "screenshotFile": "screenshots/games_gate14_net.jpg",
+      "error": null,
+      "title": "Gate 14 Games \u2014 Daily Fitness Puzzles"
+    },
+    {
+      "domain": "alfred.gate14.net",
+      "name": "Alfred (Gate 14)",
+      "status": "live",
+      "finalUrl": "https://alfred.gate14.net/",
+      "screenshotFile": "screenshots/alfred_gate14_net.jpg",
+      "error": null,
+      "title": "Daily Hype Machine"
+    },
+    {
+      "domain": "gate14-daily-stats.pages.dev",
+      "name": "Gate 14 Daily Stats",
+      "status": "live",
+      "finalUrl": "https://gate14-daily-stats.pages.dev/",
+      "screenshotFile": "screenshots/gate14-daily-stats_pages_dev.jpg",
+      "error": null,
+      "title": "Gate 14 WOD \u2014 Mar 8, 2026"
+    },
+    {
+      "domain": "long-on-stables.pages.dev",
+      "name": "Long On Stables",
+      "status": "live",
+      "finalUrl": "https://long-on-stables.pages.dev/",
+      "screenshotFile": "screenshots/long-on-stables_pages_dev.jpg",
+      "error": null,
+      "title": "LONG ON STABLES"
+    },
+    {
+      "domain": "stabltradl.pages.dev",
+      "name": "StablTradl",
+      "status": "live",
+      "finalUrl": "https://stabltradl.pages.dev/",
+      "screenshotFile": "screenshots/stabltradl_pages_dev.jpg",
+      "error": null,
+      "title": "STABLTRADL \u2014 Guess the Stablecoin Country"
+    },
+    {
+      "domain": "hardcorenicknames.pages.dev",
+      "name": "Hardcore Nicknames",
+      "status": "live",
+      "finalUrl": "https://hardcorenicknames.pages.dev/",
+      "screenshotFile": "screenshots/hardcorenicknames_pages_dev.jpg",
+      "error": null,
+      "title": "HARDCORE NICKNAME GENERATOR"
+    },
+    {
+      "domain": "stblphoria.pages.dev",
+      "name": "STBLphoria",
+      "status": "live",
+      "finalUrl": "https://stblphoria.pages.dev/",
+      "screenshotFile": "screenshots/stblphoria_pages_dev.jpg",
+      "error": null,
+      "title": "STBLPHORIA \u2014 Tap Trading for Stablecoins"
+    },
+    {
+      "domain": "stblr.pages.dev",
+      "name": "STBLR App",
+      "status": "live",
+      "finalUrl": "https://stblr.pages.dev/",
+      "screenshotFile": "screenshots/stblr_pages_dev.jpg",
+      "error": null,
+      "title": "STBLR \u2014 Infrastructure Word Game"
     }
   ],
   "comingSoon": [
